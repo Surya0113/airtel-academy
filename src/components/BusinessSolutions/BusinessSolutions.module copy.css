@@ -1,0 +1,121 @@
+/* components/BusinessSolutions/BusinessSolutions.module.css */
+.section {
+    padding: 4rem 2rem;
+    background-color: var(--section-bg);
+  }
+  
+  .sectionTitle {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+  }
+  
+  .tabContainer {
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  }
+  
+  .tabs {
+    display: flex;
+    border-bottom: 1px solid var(--border-color);
+  }
+  
+  .tab {
+    flex: 1;
+    padding: 1rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--text-secondary);
+    transition: all 0.2s ease;
+    position: relative;
+  }
+  
+  .tab:hover {
+    color: var(--primary-color);
+  }
+  
+  .tab.active {
+    color: var(--primary-color);
+  }
+  
+  .tab.active::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background-color: var(--primary-color);
+  }
+  
+  .tabContent {
+    padding: 2rem;
+  }
+  
+  .tabContent h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+  }
+  
+  .tabContent p {
+    color: var(--text-primary);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+  }
+  
+  .features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .features li {
+    background-color: var(--light-bg);
+    padding: 0.8rem;
+    border-radius: 6px;
+    text-align: center;
+    font-size: 0.9rem;
+  }
+  
+  .ctaButton {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.8rem;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .ctaButton:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+  }
+  
+  @media (max-width: 768px) {
+    .tabs {
+      flex-direction: column;
+      border-bottom: none;
+    }
+    
+    .tab {
+      border-bottom: 1px solid var(--border-color);
+    }
+    
+    .tab.active::after {
+      display: none;
+    }
+    
+    .features {
+      grid-template-columns: 1fr;
+    }
+  }

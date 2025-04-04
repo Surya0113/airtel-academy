@@ -1,0 +1,73 @@
+/* components/Testimonials/Testimonials.module.css */
+.section {
+    padding: 4rem 2rem;
+    background-color: white;
+  }
+  
+  .sectionTitle {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+  }
+  
+  .testimonials {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .testimonialCard {
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px;
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    position: relative;
+  }
+  
+  .testimonialCard::before {
+    content: '"';
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    font-size: 5rem;
+    color: var(--primary-color);
+    opacity: 0.1;
+    font-family: serif;
+    line-height: 1;
+  }
+  
+  .quote {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    color: var(--text-primary);
+    position: relative;
+    z-index: 1;
+  }
+  
+  .author {
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 0.3rem;
+  }
+  
+  .role {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+  }
+  
+  @media (max-width: 768px) {
+    .testimonials {
+      flex-direction: column;
+    }
+    
+    .testimonialCard {
+      min-width: 100%;
+    }
+  }

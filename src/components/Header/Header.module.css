@@ -1,0 +1,279 @@
+/* src/components/Header/Header.module.css */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: var(--header-bg);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .logoContainer {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo {
+    height: 40px;
+    width: auto;
+    transition: transform 0.2s ease;
+  }
+  
+  .logo:hover {
+    transform: scale(1.05);
+  }
+  
+  .nav {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  
+  .langToggle,
+  .themeToggle {
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    border: none;
+    background: transparent;
+  }
+  
+  .langToggle {
+    border: 1px solid var(--border-color);
+  }
+  
+  .langToggle:hover,
+  .themeToggle:hover {
+    background-color: var(--hover-bg);
+  }
+  
+  .navLinks {
+    display: flex;
+    gap: 1.5rem;
+    margin: 0 1rem;
+  }
+  
+  .navLink {
+    color: var(--text-primary);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 0;
+    position: relative;
+    transition: color 0.2s ease;
+  }
+  
+  .navLink:hover {
+    color: var(--primary-color);
+  }
+  
+  .navLink::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-color);
+    transition: width 0.3s ease;
+  }
+  
+  .navLink:hover::after {
+    width: 100%;
+  }
+  
+  .authButtons {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .loginBtn,
+  .signupBtn {
+    padding: 0.5rem 1.2rem;
+    border-radius: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-decoration: none;
+  }
+  
+  .loginBtn {
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+  }
+  
+  .loginBtn:hover {
+    background-color: rgba(0, 46, 109, 0.1);
+  }
+  
+  .signupBtn {
+    background-color: var(--primary-color);
+    color: white;
+    border: 1px solid var(--primary-color);
+  }
+  
+  .signupBtn:hover {
+    background-color: var(--primary-dark);
+    border-color: var(--primary-dark);
+  }
+  
+  .userDropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .userButton {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    transition: all 0.2s ease;
+  }
+  
+  .userButton:hover {
+    transform: scale(1.1);
+  }
+  
+  .dropdownContent {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: var(--card-bg);
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    z-index: 1;
+    overflow: hidden;
+  }
+  
+  .userDropdown:hover .dropdownContent {
+    display: block;
+  }
+  
+  .dropdownItem {
+    color: var(--text-primary);
+    padding: 0.8rem 1rem;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    transition: background-color 0.2s ease;
+    border: none;
+    background: none;
+    width: 100%;
+    cursor: pointer;
+    font-size: 0.9rem;
+  }
+  
+  .dropdownItem:hover {
+    background-color: var(--hover-bg);
+    color: var(--primary-color);
+  }
+  
+  .menuButton {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+  }
+  
+  .menuIcon {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background-color: var(--text-primary);
+    position: relative;
+  }
+  
+  .menuIcon::before,
+  .menuIcon::after {
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 2px;
+    background-color: var(--text-primary);
+    left: 0;
+    transition: all 0.3s ease;
+  }
+  
+  .menuIcon::before {
+    top: -6px;
+  }
+  
+  .menuIcon::after {
+    top: 6px;
+  }
+  
+  /* Mobile Styles */
+  @media (max-width: 768px) {
+    .header {
+      padding: 1rem;
+    }
+    
+    .nav {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background-color: var(--header-bg);
+      flex-direction: column;
+      padding: 1rem;
+      gap: 1rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    
+    .nav.active {
+      display: flex;
+    }
+    
+    .navLinks {
+      flex-direction: column;
+      margin: 0;
+      gap: 0.5rem;
+    }
+    
+    .authButtons {
+      flex-direction: column;
+      width: 100%;
+      gap: 0.5rem;
+    }
+    
+    .loginBtn,
+    .signupBtn {
+      width: 100%;
+      text-align: center;
+    }
+    
+    .menuButton {
+      display: block;
+    }
+    
+    .userDropdown {
+      width: 100%;
+    }
+    
+    .dropdownContent {
+      position: static;
+      box-shadow: none;
+      display: none;
+      width: 100%;
+    }
+    
+    .userDropdown:hover .dropdownContent,
+    .userDropdown.active .dropdownContent {
+      display: block;
+    }
+  }

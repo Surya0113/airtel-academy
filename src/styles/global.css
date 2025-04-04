@@ -1,0 +1,68 @@
+/* styles/global.css */
+:root {
+    /* Light Theme */
+    --primary-color: #002e6d; /* Airtel Blue */
+    --primary-gradient: #002e6d, #0066cc;
+    --accent-color: #ff6b00;
+    --text-primary: #333;
+    --text-secondary: #666;
+    --bg-color: #f8f9fa;
+    --section-bg: #f0f4f8;
+    --card-bg: #ffffff;
+    --header-bg: #ffffff;
+    --footer-bg: #002e6d;
+    --border-color: #e1e1e1;
+    --light-bg: #f5f9ff;
+  }
+  
+  [data-theme="dark"] {
+    --primary-color: #4dabf7;
+    --primary-gradient: #1a3a6a, #002e6d;
+    --accent-color: #ff922b;
+    --text-primary: #f8f9fa;
+    --text-secondary: #adb5bd;
+    --bg-color: #212529;
+    --section-bg: #343a40;
+    --card-bg: #495057;
+    --header-bg: #343a40;
+    --footer-bg: #1a3a6a;
+    --border-color: #495057;
+    --light-bg: #3a4a6a;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', 'Roboto', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    transition: all 0.3s ease;
+  }
+  
+  .app {
+    min-height: 100vh;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  h1, h2, h3, h4 {
+    color: var(--text-primary);
+    margin-top: 0;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  /* Animation classes */
+  .fade-in {
+    animation: fadeIn 0.5s ease-in;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }

@@ -1,0 +1,209 @@
+/* src/components/Login/Login.module.css */
+.loginContainer {
+    display: flex;
+    min-height: 100vh;
+    background-color: var(--bg-color);
+    transition: all 0.3s ease;
+  }
+  
+  .loginContainer.dark {
+    background-color: var(--bg-color);
+  }
+  
+  .loginCard {
+    flex: 1;
+    max-width: 500px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--card-bg);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .loginHeader {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .loginHeader .logo {
+    height: 50px;
+    margin-bottom: 1rem;
+  }
+  
+  .loginHeader h2 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+  }
+  
+  .loginForm {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .formGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .formGroup label {
+    font-weight: 600;
+    color: var(--text-primary);
+  }
+  
+  .formGroup input {
+    padding: 0.8rem 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+    background-color: var(--input-bg);
+    color: var(--text-primary);
+  }
+  
+  .formGroup input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(0, 46, 109, 0.2);
+  }
+  
+  .errorInput {
+    border-color: #e63946 !important;
+  }
+  
+  .errorText {
+    color: #e63946;
+    font-size: 0.8rem;
+  }
+  
+  .passwordInput {
+    position: relative;
+  }
+  
+  .showPasswordBtn {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+  }
+  
+  .rememberForgot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .rememberMe {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    color: var(--text-primary);
+  }
+  
+  .forgotPassword {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 0.9rem;
+  }
+  
+  .forgotPassword:hover {
+    text-decoration: underline;
+  }
+  
+  .loginButton {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 1rem;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 48px;
+  }
+  
+  .loginButton:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+  }
+  
+  .loginButton:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none;
+  }
+  
+  .spinner {
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: white;
+    animation: spin 1s ease-in-out infinite;
+  }
+  
+  @keyframes spin {
+    to { transform: rotate(360deg); }
+  }
+  
+  .signupLink {
+    text-align: center;
+    margin-top: 2rem;
+    color: var(--text-secondary);
+  }
+  
+  .signupLink p {
+    margin-bottom: 0.5rem;
+  }
+  
+  .signupButton {
+    color: var(--primary-color);
+    font-weight: 600;
+    text-decoration: none;
+  }
+  
+  .signupButton:hover {
+    text-decoration: underline;
+  }
+  
+  .loginGraphics {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    background-color: var(--section-bg);
+  }
+  
+  .loginGraphics img {
+    max-width: 100%;
+    height: auto;
+    max-height: 70vh;
+  }
+  
+  @media (max-width: 768px) {
+    .loginContainer {
+      flex-direction: column;
+    }
+    
+    .loginCard {
+      max-width: 100%;
+      padding: 2rem 1rem;
+    }
+    
+    .loginGraphics {
+      display: none;
+    }
+  }
